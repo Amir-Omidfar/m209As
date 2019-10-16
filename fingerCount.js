@@ -58,26 +58,56 @@ Leap.loop(controllerOptions, function(frame) {
     
     if (extendedFingers === 0){
       letters+= shownLetters[0]+ " "+shownLetters[1]+ " "+shownLetters[2]+ " "+shownLetters[3]+"</div>";
+      document.getElementById("b1").innerText = "a";
+      document.getElementById("b2").innerText = "b";
+      document.getElementById("b3").innerText = "c";
+      document.getElementById("b4").innerText = "d";
+      document.getElementById("b5").innerText = "N/A";
     }
     else if (extendedFingers === 1)
     {
       letters+= shownLetters[4]+ " "+shownLetters[5]+ " "+shownLetters[6]+ " "+shownLetters[7]+"</div>";
+      document.getElementById("b1").innerText = "e";
+      document.getElementById("b2").innerText = "f";
+      document.getElementById("b3").innerText = "g";
+      document.getElementById("b4").innerText = "h";
+      document.getElementById("b5").innerText = "N/A";
     }
     else if (extendedFingers === 2)
     {
       letters+= shownLetters[8]+ " "+shownLetters[9]+ " "+shownLetters[10]+ " "+shownLetters[11]+"</div>";
+      document.getElementById("b1").innerText = "i";
+      document.getElementById("b2").innerText = "j";
+      document.getElementById("b3").innerText = "k";
+      document.getElementById("b4").innerText = "l";
+      document.getElementById("b5").innerText = "N/A";
     }
     else if (extendedFingers === 3)
     {
       letters+= shownLetters[12]+ " "+shownLetters[13]+ " "+shownLetters[14]+ " "+shownLetters[15]+ " "+shownLetters[16]+"</div>";
+      document.getElementById("b1").innerText = "m";
+      document.getElementById("b2").innerText = "n";
+      document.getElementById("b3").innerText = "o";
+      document.getElementById("b4").innerText = "p";
+      document.getElementById("b5").innerText = "q";
     }
     else if (extendedFingers === 4)
     {
       letters+= shownLetters[17]+ " "+shownLetters[18]+ " "+shownLetters[19]+ " "+shownLetters[20]+ " "+shownLetters[21]+"</div>";
+      document.getElementById("b1").innerText = "r";
+      document.getElementById("b2").innerText = "s";
+      document.getElementById("b3").innerText = "t";
+      document.getElementById("b4").innerText = "u";
+      document.getElementById("b5").innerText = "v";
     }
     else if (extendedFingers === 5)
     {
       letters+= shownLetters[22]+ " "+shownLetters[23]+ " "+shownLetters[24]+ " "+shownLetters[25]+"</div>";
+      document.getElementById("b1").innerText = "w";
+      document.getElementById("b2").innerText = "x";
+      document.getElementById("b3").innerText = "y";
+      document.getElementById("b4").innerText = "z";
+      document.getElementById("b5").innerText = "N/A";
     }
     else
     {
@@ -95,5 +125,7 @@ Leap.loop(controllerOptions, function(frame) {
   
 
 })
+
+
 
 

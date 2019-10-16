@@ -19,6 +19,9 @@ function togglePause() {
     document.getElementById("pause").innerText = "Pause";
   }
 }
+
+
+
 function pauseForGestures() {
   if (document.getElementById("pauseOnGesture").checked) {
     pauseOnGesture = true;
