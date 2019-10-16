@@ -7,4 +7,5 @@
 1. The [leap motion sensor](https://www.leapmotion.com) is used for counting the number of fingers exrtended in the user's left/right hand.(We are using numbers 0 through 5)
 2. Each 4-5 letters are grouped under the detected numbers 0-5. We use buttons to toggle through and pick the right letter.
 
+TODO: complete the readMe as we go
     
