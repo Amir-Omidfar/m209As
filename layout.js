@@ -1,4 +1,4 @@
-//here goes the buttons and page setup 
+//here goes the buttons, page setup and help functions  
 
 
 function vectorToString(vector, digits) {
