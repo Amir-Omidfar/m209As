@@ -9,6 +9,10 @@ var controllerOptions = {enableGestures: true};
 // to use HMD mode:
 controllerOptions.optimizeHMD = true;
 
+// letters 
+var letters = "";
+var shownLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","v","z"];
+
 Leap.loop(controllerOptions, function(frame) {
   if (paused) {
     return; // Skip this update
@@ -46,35 +50,50 @@ Leap.loop(controllerOptions, function(frame) {
 
   // Display the corresponding letters for the number of extended fingers 
   var lettersOutput = document.getElementById("letters");
-  var letters = "";
   if (fingerCount != "<div></div>")
   {
     letters="<div style='width:250px; float:left; padding:5px'>"
     letters="Select from:"+"<br />";
-    var shownLetters = [];
-    switch(extendedFingers){
-      case 0:
-      shownLetters = ["a","b","c","d"];
-      case 1:
-      shownLetters = ["e","f","g","h"];
-      case 2:
-      shownLetters = ["i","j","k","l"];
-      case 3:
-      shownLetters = ["m","n","o","p","q"];
-      case 4:
-      shownLetters = ["r","s","t","u","v"];
-      case 5: 
-      shownLetters = ["w","x","v","z"]; 
+    
+    
+    if (extendedFingers === 0){
+      letters+= shownLetters[0]+ " "+shownLetters[1]+ " "+shownLetters[2]+ " "+shownLetters[3]+"</div>";
     }
-    letters+=shownLetters+"</div>"
+    else if (extendedFingers === 1)
+    {
+      letters+= shownLetters[4]+ " "+shownLetters[5]+ " "+shownLetters[6]+ " "+shownLetters[7]+"</div>";
+    }
+    else if (extendedFingers === 2)
+    {
+      letters+= shownLetters[8]+ " "+shownLetters[9]+ " "+shownLetters[10]+ " "+shownLetters[11]+"</div>";
+    }
+    else if (extendedFingers === 3)
+    {
+      letters+= shownLetters[12]+ " "+shownLetters[13]+ " "+shownLetters[14]+ " "+shownLetters[15]+ " "+shownLetters[16]+"</div>";
+    }
+    else if (extendedFingers === 4)
+    {
+      letters+= shownLetters[17]+ " "+shownLetters[18]+ " "+shownLetters[19]+ " "+shownLetters[20]+ " "+shownLetters[21]+"</div>";
+    }
+    else if (extendedFingers === 5)
+    {
+      letters+= shownLetters[22]+ " "+shownLetters[23]+ " "+shownLetters[24]+ " "+shownLetters[25]+"</div>";
+    }
+    else
+    {
+      letters += "wait</div>";
+    }
+
   }
   else
   {
-    letters="<div>No letter to display! </div>"
+    letters="<div>No letter to display! </div>";
   }
   lettersOutput.innerHTML = letters;
   // Store frame for motion functions
   previousFrame = frame;
+  
+
 })
 
 
