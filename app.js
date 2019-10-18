@@ -6,3 +6,6 @@ serialport.on('open', function(){
       console.log(data[0]);
   });
 });
+
+
+//Source: https://solvemprobler.com/blog/2014/04/12/arduino-and-nodejs-communication-with-serial-ports/
