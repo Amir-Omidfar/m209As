@@ -1,14 +1,16 @@
-var server = require("./server");
-var router = require("./route");
-var requestHandlers = require("./requestHandlers");
+//Amirali Omidfar 
+
+//var server = require("./server");
+//var router = require("./route");
+//var requestHandlers = require("./requestHandlers");
 
 var debug = false;
 
-var handle = {}
-handle["/"] = requestHandlers.sendInterface;
-handle["/interface"] = requestHandlers.sendInterface;
+//var handle = {}
+//handle["/"] = requestHandlers.sendInterface;
+//handle["/interface"] = requestHandlers.sendInterface;
 
-server.start(router.route,handle,debug);
+//server.start(router.route,handle,debug);
 //HH Edits
 
 // Store frame for motion functions
@@ -131,6 +133,11 @@ Leap.loop(controllerOptions, function(frame) {
   else
   {
     letters="<div>No letter to display! </div>";
+    document.getElementById("b1").innerText = "";
+    document.getElementById("b2").innerText = "";
+    document.getElementById("b3").innerText = "";
+    document.getElementById("b4").innerText = "";
+    document.getElementById("b5").innerText = "";
   }
   lettersOutput.innerHTML = letters;
   // Store frame for motion functions
