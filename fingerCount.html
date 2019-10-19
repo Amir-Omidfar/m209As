@@ -4,29 +4,36 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Leap Motion FingerCount</title>
+<title>Leap Motion Finger Count</title>
 
 <!--leapMotion library-->
 <script src="leap-0.6.4.js"></script>
 
 <!--arduino buttons library-->
-<script></script>
+<script src="button.js"></script>
 
 <!--fingerDetection script-->
 <script src="fingerCount.js"></script>
-<!--page layout code-->
 
+<!--page layout code-->
 <script src="layout.js"></script>
 
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 </head>
 
 
 <body>
 <h1>Leap Motion FingerCount </h1>
 <div id="main">
-  <button id="pause" onclick="togglePause()">Pause</button>
-  <input type="checkbox" id="pauseOnGesture" onclick="pauseForGestures()">Pause on gesture</input>
-  <h3>Finger and tool data:</h3>
+  <br><button id="pause" onclick="togglePause()">Pause</button>
+  <br><input type="checkbox" id="pauseOnGesture" onclick="pauseForGestures()">Pause on gesture</input>
+  <br><h3>Finger and tool data:</h3>
   <div id="pointableData"></div>
   <div style="clear:both">
   <div id="fingerCount"></div>
@@ -34,13 +41,21 @@
   <div id="letters"></div>
   <h3>Pick your letter:</h3>
   
-  <button id="b1"></button>
+  <br><button id="b1"></button>
   <button id="b2"></button>
   <button id="b3"></button>
   <button id="b4"></button>
   <button id="b5"></button>
   <div style="clear:both">
   <input id="name" type="text" placeholder="Enter your text here"/>
+  
+  
+  <form action="/action_page.php" autocomplete="on">
+   <br>Text Entry:<br>
+   <input type="text" name="fname"><br>
+  </form>
+
+<img src="key.gif" alt="Text Entry Map" style="width:50%;" height="500" width="500">
   
 </body>
 </html>
