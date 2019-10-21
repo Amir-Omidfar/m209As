@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 
-
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Leap Motion Finger Count</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Leap Motion Finger Count</title>
 
-<!--leapMotion library-->
-<script src="leap-0.6.4.js"></script>
+	<!--leapMotion library-->
+	<script src="leap-0.6.4.js"></script>
 
-<!--arduino buttons library-->
-<script src="button.js"></script>
+	<!--arduino buttons library-->
+	<script src="button.js"></script>
 
-<!--fingerDetection script-->
-<script src="fingerCount.js"></script>
+	<!--fingerDetection script-->
+	<script src="fingerCount.js"></script>
 
-<!--page layout code-->
-<script src="layout.js"></script>
+	<!--page layout code-->
+	<script src="layout.js"></script>
 
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
+	<style>
+	img {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	</style>
+
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
 
@@ -48,12 +52,20 @@ img {
   <button id="b5"></button>
   
   
-  <form action="/action_page.php" autocomplete="on">
-   <br>Text Entry:<br>
-   <input type="text" name="fname"><br>
-  </form>
-
-<img src="key.gif" alt="Text Entry Map" style="width:50%;" height="500" width="500">
-  
+   <br><br>Text Entry:<br>
+   <br><input autocomplete="off" id="input" type="text" onkeyup="textUpdated(this)"><br>
+   <p id="guess"></p>
+		
+	<div>
+			<ul>
+				<li>Use TAB to select the autocomplete suggestion</li>
+				<li>Use ESC to clear the text box</li>
+			</ul>
+		</div>
+	<script src="script.js"></script>
+	<center>
+		<img src="key.gif" alt="Text Entry Map">
+	  </center>
+	  
 </body>
 </html>

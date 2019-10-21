@@ -6,7 +6,7 @@ SerialPort = require("serialport").SerialPort
 
 var socketServer;
 var serialPort;
-var portName = 'COM7'; //change this to your Arduino port
+var portName = 'COM6'; //change this to your Arduino port
 var sendData = "";
 
 // handle contains locations to browse to (vote and poll); pathnames.
