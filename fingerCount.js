@@ -26,6 +26,12 @@ controllerOptions.optimizeHMD = true;
 var letters = "";
 var shownLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","v","z"];
 
+function defaultImg() {  
+  pic = "default.png";
+  document.getElementById('keyPic').src = pic.replace('90x90', '225x225');
+  document.getElementById('keyPic').style.display='block';
+}
+
 Leap.loop(controllerOptions, function(frame) {
   if (paused) {
     return; // Skip this update
