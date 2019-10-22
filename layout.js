@@ -32,12 +32,3 @@ function pauseForGestures() {
 
 
 
-function toggleImage() {
-  paused = !paused;
-
-  if (paused) {
-    document.getElementById("b1")
-  } else {
-    document.getElementById("b2")
-  }
-}

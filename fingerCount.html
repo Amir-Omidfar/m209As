@@ -45,17 +45,18 @@
   <div id="letters"></div>
   <h3>Pick your letter:</h3>
   
-  <br><button id="b1"></button>
-  <button id="b2"></button>
-  <button id="b3"></button>
-  <button id="b4"></button>
-  <button id="b5"></button>
+  <br><button id="b1" onclick="defaultImg()"></button>
+  <button id="b2" onclick="defaultImg()"></button>
+  <button id="b3" onclick="defaultImg()"></button>
+  <button id="b4" onclick="defaultImg()"></button>
+  <button id="b5" onclick="defaultImg()"></button>
   
   
    <br><br>Text Entry:<br>
    <br><input autocomplete="off" id="input" type="text" onkeyup="textUpdated(this)"><br>
    <p id="guess"></p>
-		
+   <!--Keep one of these-->
+	<textarea class="use-keyboard-input" style="position: absolute; top: 130px; right: 30px; width: 300px;"></textarea>	
 	<div>
 			<ul>
 				<li>Use TAB to select the autocomplete suggestion</li>
@@ -64,7 +65,7 @@
 		</div>
 	<script src="script.js"></script>
 	<center>
-		<img src="key.gif" alt="Text Entry Map">
+		<img src="keyPic" src="keyPic" style="display:none;" alt="Text Entry Map">
 	  </center>
 	  
 </body>
