@@ -9,12 +9,12 @@
 
    | Number of extended fingers | Alphabets assigned |
    |----------------------------|--------------------|
-   |         0                  | a b c d            |
-   |         1                  | e f g h            |
-   |         2                  | i j k l            |
+   |         0                  | a b c d space      |
+   |         1                  | e f g h backSapce  |
+   |         2                  | i j k l .          |
    |         3                  | m n o p q          |
    |         4                  | r s t u v          |
-   |         5                  | w x y z            |
+   |         5                  | w x y z ,          |
 
 
 
