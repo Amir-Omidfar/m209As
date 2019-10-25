@@ -1,4 +1,17 @@
-//Amirali Omidfar 
+//Amirali Omidfar, Hananeh Hojaiji, Haisong Lin
+//Based on some examples in the given Github 
+// https://github.com/leapmotion/leapjs
+// For more information please refer to : 
+/*!                                                              
+ * LeapJS v0.6.4                                                  
+ * http://github.com/leapmotion/leapjs/                                        
+ *                                                                             
+ * Copyright 2013 LeapMotion, Inc. and other contributors                      
+ * Released under the Apache-2.0 license                                     
+ * http://github.com/leapmotion/leapjs/blob/master/LICENSE.txt                 
+ */
+
+
 var counter=0;
 var previousFrame = null;
 var paused = false;
