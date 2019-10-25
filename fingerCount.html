@@ -1,6 +1,6 @@
-<!-- initially desinged for extended fingers count based off Leap motion js library- Amirali Omidfar >
-<!DOCTYPE html>
+<!-- initially desinged for extended fingers count based off Leap motion js library- Amirali Omidfar -->
 
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -8,16 +8,15 @@
 <title>Leap Motion Finger Count</title>
 
 <!--leapMotion library-->
-<script src="leap-0.6.4.js"></script>
-<!-- jquery library-->
-<script src="jquery-3.4.1.js"></script>
 
+<script src="leap-0.6.4.js"></script>
 
 <!--fingerDetection script-->
 <script src="fingerCount.js"></script>
 
-<!--page layout code-->
-<script src="layout.js"></script>
+<script src="jquery-3.4.1.js"></script>
+
+
 
 
 
@@ -25,40 +24,41 @@
 
 
 <body>
-  <h1>Leap Motion FingerCount </h1>
+  <h1>Leap Finger Keyboard </h1>
   <div id="main">
-  <br><button id="pause" onclick="togglePause()">Pause</button>
-  <br><input type="checkbox" id="pauseOnGesture" onclick="pauseForGestures()">Pause on gesture</input>
-  <br><h3>Finger and tool data:</h3>
+  
+  <br><h3>Finger Data:</h3>
+  <div style="clear:both;"></div>
+
   <div id="pointableData"></div>
   <div style="clear:both">
   <div id="fingerCount"></div>
+
   <div style="clear:both">
-  <div id="letters"></div>
-  <h3>Pick your letter:</h3>
   
-  <br><button id="b1"></button>
-  <button id="b2"></button>
-  <button id="b3"></button>
-  <button id="b4"></button>
-  <button id="b5"></button>
+  <p id = "result"> </p>    
+  <div style="clear:left;">
+  <input type="text" id="input" style="width:400px";>
+  
+
+
+
+  ​​<div style="clear:both">
+
+  <button id="b1"></button>
+  <button id="b2" /></button>
+  <button id="b3" /></button>
+  <button id="b4" /></button>
+  <button id="b5" /></button>
+  
+
   <div style="clear:both">
-  <input id="name" type="text" placeholder="Enter your text here"/>
-  <div style="clear:both">
+  <br />
+  <center>
+  <img id="img" src="default.png" alt="keyboard mapping" width="500" height="500">
+  </center>
+  
 
-
-  <script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $.get("192.168.1.71", function(data, status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
-  });
-});
-</script>
-
-<button>Send an HTTP GET request to a page and get the result back</button>
-   
    
 </body>
 </html>

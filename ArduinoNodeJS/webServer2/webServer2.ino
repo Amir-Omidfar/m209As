@@ -54,13 +54,13 @@ String prepareHtmlPage()
     "Refresh: 0.1\r\n" +  // refresh the page automatically every 2 sec
     "\r\n" +
     "<!DOCTYPE HTML>" +
-    "<html>" +
+    "<html>" +"<div>"+
     "Button1 pressed:  " + String(!digitalRead(button1)) + "</br>" +
     "Button2 pressed:  " + String(!digitalRead(button2)) + "</br>" +
     "Button3 pressed:  " + String(!digitalRead(button3)) + "</br>" +
     "Button4 pressed:  " + String(!digitalRead(button4)) + "</br>" +
     "Button5 pressed:  " + String(!digitalRead(button5)) + "</br>" +
-    "</html>" +
+    +"</div>"+"</html>" +
     "\r\n";
   return htmlPage;
 }
