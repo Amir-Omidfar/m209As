@@ -16,6 +16,9 @@
    |         4                  | r s t u v          |
    |         5                  | w x y z ,          |
 
+3. Our typing technique counts the number of finger shown, it then uses up and down arrow keyboard to confirm the user's selection and simply type. For more info please read our [report](https://github.com/Amir-Omidfar/m209As/blob/master/Bake%20Off%201%20Report%20.pdf)
 
+4. In order to the setup the system, you need to have the leap motion sensor set up. Once the [leap SDK](https://developer.leapmotion.com) is set up. Run the .html file and make sure the leap motion .js file is in the same directory.  
 
  
+5. Here is the link to our [demo]()
