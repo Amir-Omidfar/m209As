@@ -21,3 +21,4 @@
 4. In order to the setup the system, you need to have the leap motion sensor set up. Once the [leap SDK](https://developer.leapmotion.com) is set up. Run the fingerCount.html file and make sure the leap motion .js file is in the same directory.  
 
 5. Here is the link to our [demo](https://youtu.be/kJ3J3jtKeTY)
+
