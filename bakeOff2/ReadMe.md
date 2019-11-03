@@ -1,7 +1,7 @@
 # Bake-Off 2
 ## Project Title:
 
-## Project Team : 
+## Project Team : Amirali Omidfar, Hannaneh Hojaiji, Haisong Lin
 
 ###  What are you trying to do in your project? What kind of AI is involved? How is it interactive with users? What domain-specific problems does it solve?
 
