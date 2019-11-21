@@ -13,4 +13,4 @@
 *** We are aiming to use to rule extraction in modeling the behavior of user performed triggering mechanism and give feedback in such way that user would improve his/her triggering action in later rounds.
 
 
-For more information please refer to our mid-term presentation, which you may find here: [explainale CamIoT midter presentation]()
+For more information please refer to our mid-term presentation, which you may find here: [explainale CamIoT midter presentation](https://github.com/Amir-Omidfar/m209As/blob/master/bakeOff2/Bake%20off%202.pptx.pdf)
