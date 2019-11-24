@@ -13,10 +13,14 @@ import numpy as np
 
 ##########Server SetUp
 channel = input('channel: ')
+#channel2 = input('channel2: ')
+client_socket = socket.socket()
+client_socket.connect(('192.168.1.67', int(channel)))
 # Make a file-like object out of the connection
+connection = client_socket.makefile('wb')
 time.sleep(3)
 tSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-tSocket.connect(('192.168.1.67', int(channel)))
+tSocket.connect(('192.168.1.67', int(channel)+10))
 
 classifier = load ('/home/pi/Desktop/trigger/triggerTrain.joblib')
 
@@ -43,12 +47,12 @@ try:
         print(result)
         if result:
             print("good job!")
-            tSocket.send(b'1')
             for k in range (15):
                 data.pop(0)
         else:
             for k in range(6):
                 data.pop(0)
+        client_socket.send(result)
 
 
 
