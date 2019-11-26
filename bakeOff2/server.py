@@ -10,10 +10,19 @@ tServer.listen(0)
 connect,addr = tServer.accept()
 ###############while loop for displaying the data
 
+active=True
 try:
-	while True:
-		data=connect.recv(1024)
-		print(str(data))
+	while active:
+		data=connect.recv(1024).decode()
+		if data:
+			li = list(data.split(",")) 
+			#print(data[41])
+			#print(li[41])
+			if (len(li) > 41):
+				print(li[40])
+		else:
+			active=False
+		
 
 finally:
         tServer.close()
