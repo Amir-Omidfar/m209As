@@ -1,6 +1,6 @@
 import tkinter as tk
 import server2
-from server2 import recordData,sequence,result
+from server2 import recordData
 
 
 
@@ -17,7 +17,7 @@ B = tk.Button(root, text ="Press the button to record data", command = recordDat
 
 # Lay out label
 label.pack()
-B.place(x=50, y=10)
+B.place(x=50, y=40)
 # Run forever!
 
 root.mainloop()

@@ -1,7 +1,12 @@
 import socket
 import time 
+import numpy as np 
 global sequence
 global result
+
+counter=1
+receivedData=open("receivedData.txt","a")
+
 
 def recordData():
 	#channel = input('Channel:')
@@ -16,22 +21,24 @@ def recordData():
 	sequence=[]
 	active=True
 	try:
-		connect.send(b'1')
+		#connect.send(b'1')
 		while active:
+			command=input("Enter command")
+			command=bytearray(str(command),'utf-8')
+			connect.send(command)
 			data=connect.recv(1024).decode()
+
 			if data:
-				li = list(data.split(",")) 
-				if (len(li) > 41):
-					#print(li[40])
-					sequence=data
-				else :
-					#print(data)
-					result=data
-			else:
-				active=False
-		print(sequence)
-		print(result)	
-		return sequence,result
+				if data == "2":
+					receivedData.write("\n")
+					print("next line: ",data)
+					++counter
+				else:
+					receivedData.write(str(counter))
+					receivedData.write(", ")
+					receivedData.write(data)
+					print("received data: ", data)
+					
 
 	finally:
 	        tServer.close()

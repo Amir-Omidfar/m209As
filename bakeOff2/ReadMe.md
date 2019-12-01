@@ -14,3 +14,9 @@
 
 
 For more information please refer to our mid-term presentation, which you may find here: [explainale CamIoT midter presentation](https://github.com/Amir-Omidfar/m209As/blob/master/bakeOff2/Bake%20off%202.pptx.pdf)
+
+
+#### Things to keep in mind while training the server:
+    1. Data file format should be.csv
+    2. First row should be the titles, first row first column is "Class" and the remaining columns of the first row are xi,yi,zi i being from 1-42
+    3. 

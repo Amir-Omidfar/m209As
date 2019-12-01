@@ -1,0 +1,1 @@
+1, [array([False]), []]1, [array([False]), [], array([ True]), []]1, [array([ True]), []]1, [array([ True]), [], array([False]), []]1, [array([False]), []]1, [array([ True]), []]1, closing the connection1, []1, []
