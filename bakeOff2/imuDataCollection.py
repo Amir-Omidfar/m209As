@@ -46,6 +46,7 @@ while active:
             imuData.write(str(gyro_data['z']))
             imuData.write(", ")
             '''
-            time.sleep(0.1)
+            t
+        
         counter +=1
 
