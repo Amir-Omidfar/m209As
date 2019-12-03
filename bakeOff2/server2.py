@@ -1,3 +1,4 @@
+
 import socket
 import time 
 import numpy as np 
@@ -5,7 +6,7 @@ import numpy as np
 receivedData=open("receivedData.txt","a")
 receivedData.write("\n")
 
-def recordData():
+def connectionInit():
 	#channel = input('Channel:')
 	channel = 8081
 	########################
@@ -24,7 +25,7 @@ def recordData():
 			if int(command) == 2 :
 				active=False
 				connect.send(b'0')
-			else:
+			elif int(command) ==1 :
 				command=bytearray(str(command),'utf-8')
 				connect.send(command)
 				data=connect.recv(1024).decode()
@@ -39,4 +40,3 @@ def recordData():
 	finally:
 		print("closing connection")
 		tServer.close()
-

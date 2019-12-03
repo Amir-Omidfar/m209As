@@ -1,7 +1,7 @@
 import socket
 import time 
 
-channel = input('Channel:')
+channel = 4040
 ########################
 time.sleep(2)
 tServer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
