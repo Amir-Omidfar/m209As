@@ -12,18 +12,21 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(32,GPIO.OUT,initial=GPIO.LOW)
 
-classifier = load ('/home/pi/Desktop/trigger/triggerTrain.joblib')
+classifier = load ('/home/pi/Desktop/trigger/triggerTrainNoLowRange.joblib')
 
 def imuTri():
   imuData = open("imuPredictData.csv","a")
-  GPIO.output(32,GPIO.HIGH)
+  #GPIO.output(32,GPIO.HIGH)
 
   active = True
   counter = 0
   label = ""
   data= []
+  state=0
+  pState=0
   print("Recording Data")
   while active:
+        GPIO.output(32,GPIO.LOW)
         while len(data) < 42 : 
             accel_data = sensor.get_all_data()[0]
            # gyro_data = sensor.get_all_data()[1]
@@ -39,17 +42,23 @@ def imuTri():
             time.sleep(0.1)
         newData=np.reshape(data,(1,-1))
         result = classifier.predict(newData)
-        #print(result)
-        if result:
+        result=str(result)
+        print(result)
+
+        if result=='[ True]':
             GPIO.output(32,GPIO.HIGH)
             time.sleep(.5)
             print("True")
             GPIO.output(32,GPIO.LOW)
-        
-        for k in range(3):
-          data.pop(0)
+        result=""
+        GPIO.output(32,GPIO.LOW)
+        if result =='[ True]':
+            data.clear()
+        else:
+            for k in range(9):
+                data.pop(0)
         #data.clear()
 
-#while True:
-  #imuTri()
+while True:
+  imuTri()
 #imuTri()
