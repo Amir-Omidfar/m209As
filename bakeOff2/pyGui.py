@@ -1,3 +1,4 @@
+#Team:Amirali Omidfar, Hannaneh Hojaiji
 from sys import platform as sys_pf
 if sys_pf == 'darwin':
     import matplotlib
@@ -13,6 +14,12 @@ import socket
 import server3
 from server3 import connection
 
+
+
+#Voice commands
+import pyttsx3
+
+
 import time 
 import numpy as np 
 from polishData import polishMyData
@@ -22,7 +29,7 @@ channel=2020
 import matplotlib 
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as pet
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 #import processData2
 from processData2 import processMyData
@@ -76,13 +83,14 @@ def connectionInit():
 
 
 # Create the main window and Buttons 
+engine = pyttsx3.init()
 
 
 def gui_start():
 	global root
 	root = tk.Tk()
 	root.title("Explainable CamIoT")
-	root.geometry("1500x800")
+	root.geometry("800x800")
 
 	def conTestFunc():
 		return 5
@@ -112,6 +120,28 @@ def gui_start():
 		axe.set_ylabel('acceleration') 
 		axe.set_xlabel('time')
 		axe.legend()
+		f = pet.figure(figsize=(5,5), dpi =100)
+		axe1 = f.add_subplot(1, 3, 1)
+		axe2 = f.add_subplot(1, 3, 2)
+		axe3 = f.add_subplot(1, 3, 3)
+		axe1.clear() 
+		axe2.clear()
+		axe3.clear() 
+		axe1.plot(ax, label = "Ax")   
+		axe2.plot(ay, label = "Ay")  
+		axe3.plot(az, label = "Az")   
+		axe1.plot(Viy, label = "Vy")
+		axe2.plot(Vix, label = "Vx")
+		axe1.set_ylabel('Processed Data') 
+		axe1.set_xlabel('time')
+		axe2.set_xlabel('time')
+		axe3.set_xlabel('time')
+		axe1.legend()
+		axe2.legend()
+		axe3.legend()
+		# Format plot
+		pet.xticks(rotation=45, ha='right')
+		pet.subplots_adjust(bottom=0.30)
 		canvas = FigureCanvasTkAgg(f, master=root)
 		canvas.draw()
 		canvas.get_tk_widget().grid(row=3,column=0,sticky=W)
@@ -124,7 +154,17 @@ def gui_start():
 		az.clear()
 		Viy.clear()
 		Vix.clear()
-
+		Vix.clear()
+		Viy.clear()
+		xs.clear()
+		vx=0
+		vy=0
+		#engine = pyttsx3.init()
+		engine.say(result)
+		
+		conTestLabel.grid(row=5,column=0,sticky=W)
+		#engine.runAndWait()
+	
 	instLabel=tk.Label(root,text="Hit Record Data to begin. Then Follow the blinking LED to its permanent ON state and perform the gesture.")
 	resLabel=tk.Label(root,text="To see your result then press Show My Analysis")
 	conTestLabel=tk.Label(root,text="After you're done practicing the gesture. Click below for continious testing.")
@@ -147,11 +187,12 @@ def gui_start():
 	analysisB.grid(row=2,column=0)
 	resetButton.place(relx=0.01,rely=0.9)
 	Exit.place(relx=0.5,rely=0.9)
+	
 
-	tkinter.ttk.Separator(root, orient=VERTICAL).grid(column=1, row=0, rowspan=5, sticky='ns')
+	#tkinter.ttk.Separator(root, orient=VERTICAL).grid(column=1, row=0, rowspan=5, sticky='ns')
 
-	conTestLabel.grid(row=0,column=2,sticky=W+E)
-	conTestB.grid(row=1,column=2)
+	
+	#conTestB.grid(row=1,column=2)
 
 
 	# Run forever!	
