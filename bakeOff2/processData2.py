@@ -38,7 +38,7 @@ def processMyData():
 	    lastRow=Rows[-1]
 
 	
-	#global ax,ay,az,Vix,Viy,xs,vx,vy
+	global ax,ay,az,Vix,Viy,xs,vx,vy
 	vx = 0
 	vy = 0
 	rawData=lastRow[42]

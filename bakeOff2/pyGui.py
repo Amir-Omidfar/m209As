@@ -10,8 +10,8 @@ import tkinter.ttk
 import server2
 #from server2 import connectionInit
 import socket
-
-
+import server3
+from server3 import connection
 
 import time 
 import numpy as np 
@@ -100,14 +100,15 @@ def gui_start():
 
 	def analysisFunc():
 		result=processMyData()
-		f = Figure(figsize=(2,2), dpi=100)
+		f = Figure(figsize=(5,5), dpi=100)
 		axe = f.add_subplot(1, 1, 1)
+		global ax,ay,az,Vix,Viy,xs,vx,vy
 		axe.clear()  
-		axe.plot(xs,ax, label = "Ax")   
-		axe.plot(xs,ay, label = "Ay")  
-		axe.plot(xs,az, label = "Az")   
-		axe.plot(xs,Viy, label = "Vy")
-		axe.plot(xs,Vix, label = "Vx")
+		axe.plot(ax, label = "Ax")   
+		axe.plot(ay, label = "Ay")  
+		axe.plot(az, label = "Az")   
+		axe.plot(Viy, label = "Vy")
+		axe.plot(Vix, label = "Vx")
 		axe.set_ylabel('acceleration') 
 		axe.set_xlabel('time')
 		axe.legend()
@@ -118,10 +119,11 @@ def gui_start():
 		resetButton.config(state="normal")
 		anLabel=tk.Label(root,text=result,borderwidth=2, relief="solid")
 		anLabel.grid(row=4,column=0,sticky=W)
-    
-
-
-
+		ax.clear()
+		ay.clear()
+		az.clear()
+		Viy.clear()
+		Vix.clear()
 
 	instLabel=tk.Label(root,text="Hit Record Data to begin. Then Follow the blinking LED to its permanent ON state and perform the gesture.")
 	resLabel=tk.Label(root,text="To see your result then press Show My Analysis")
@@ -129,7 +131,7 @@ def gui_start():
 	
 	rdB=tk.Button(root, text="Record Data", command=connection_pressed)
 	analysisB=tk.Button(root,text="Show My Analysis",command=analysisFunc)
-	conTestB=tk.Button(root,text="continious Testing",command=conTestFunc)
+	conTestB=tk.Button(root,text="continious Testing",command=connection)
 	resetButton=tk.Button(root,text="Try Again",command=refresh,state=DISABLED)
 	Exit = tk.Button(root, text="Exit the program", command = close_window)
 
@@ -152,7 +154,7 @@ def gui_start():
 	conTestB.grid(row=1,column=2)
 
 
-	# Run forever!
+	# Run forever!	
 	root.mainloop()
 
 if __name__ == '__main__':
