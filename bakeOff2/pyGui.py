@@ -1,4 +1,5 @@
 #Team:Amirali Omidfar, Hannaneh Hojaiji
+#resource:https://matplotlib.org/3.1.1/tutorials/intermediate/tight_layout_guide.html
 from sys import platform as sys_pf
 if sys_pf == 'darwin':
     import matplotlib
@@ -30,7 +31,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 #import processData2
 from processData2 import processMyData
-from processData2 import ax,ay,az,Vix,Viy,xs,vx,vy
+from processData2 import ax,ay,az,Vix,Viy,Viz,xs,vx,vy
 ############################################Server code
 
 
@@ -104,32 +105,38 @@ def gui_start():
 
 	def analysisFunc():
 		result=processMyData()
-		global ax,ay,az,Vix,Viy,xs,vx,vy
-		f = pet.figure(figsize=(5,5), dpi =100)
-		axe1 = f.add_subplot(1, 3, 1)
-		axe2 = f.add_subplot(1, 3, 2)
-		axe3 = f.add_subplot(1, 3, 3)
-		axe1.clear() 
+		global ax,ay,az,Vix,Viy,Viz,xs,vx,vy,vz
+		#f = pet.figure(figsize=(5,5), dpi =100)
+		# axe1 = f.add_subplot(1, 3, 1)
+		# axe2 = f.add_subplot(1, 3, 2)
+		# axe3 = f.add_subplot(1, 3, 3) 
+		f, (axe1, axe2, axe3) = pet.subplots(nrows=1, ncols=3,figsize=(10,3))
+		axe1.clear()
 		axe2.clear()
-		axe3.clear() 
+		axe3.clear()
 		axe1.plot(ax, label = "Ax")   
 		axe2.plot(ay, label = "Ay")  
 		axe3.plot(az, label = "Az")   
 		axe1.plot(Viy, label = "Vy")
 		axe2.plot(Vix, label = "Vx")
+		axe3.plot(Viz, label = "Vz")
 		axe1.set_ylabel('Processed Data') 
 		axe1.set_xlabel('time')
 		axe2.set_xlabel('time')
 		axe3.set_xlabel('time')
-		axe1.legend()
-		axe2.legend()
-		axe3.legend()
+		axe1.legend(loc='upper right')
+		axe2.legend(loc='upper right')
+		axe3.legend(loc='upper right')
+		pet.tight_layout()
 		# Format plot
-		pet.xticks(rotation=45, ha='right')
-		pet.subplots_adjust(bottom=0.30)
+		#pet.xticks(rotation=45, ha='right')
+		#pet.subplots_adjust(bottom=0.30)
+		pet.setp(axe1.xaxis.get_majorticklabels(), rotation=45)
+		pet.setp(axe2.xaxis.get_majorticklabels(), rotation=45)
+		pet.setp(axe3.xaxis.get_majorticklabels(), rotation=45)
 		canvas = FigureCanvasTkAgg(f, master=root)
 		canvas.draw()
-		canvas.get_tk_widget().grid(row=3,column=0,sticky=W)
+		canvas.get_tk_widget().grid(row=3,column=0,columnspan=2,sticky=W+E)
 		#canvas._tkcanvas.grid(row=3,column=0,sticky=W)
 		resetButton.config(state="normal")
 		anLabel=tk.Label(root,text=result,borderwidth=2, relief="solid")
@@ -139,12 +146,15 @@ def gui_start():
 		az.clear()
 		Vix.clear()
 		Viy.clear()
+		Viz.clear()
 		xs.clear()
 		vx=0
 		vy=0
+		vz=0
 		engine = pyttsx3.init()
 		engine.say(result)
 		engine.runAndWait()
+		conTestLabel.grid(row=6,column=0,sticky=W)
 
 
 	
@@ -154,7 +164,7 @@ def gui_start():
 	
 	rdB=tk.Button(root, text="Record Data", command=connection_pressed)
 	analysisB=tk.Button(root,text="Show My Analysis",command=analysisFunc)
-	conTestB=tk.Button(root,text="continious Testing",command=conTestFunc)
+	#conTestB=tk.Button(root,text="continious Testing",command=conTestFunc)
 	resetButton=tk.Button(root,text="Try Again",command=refresh,state=DISABLED)
 	Exit = tk.Button(root, text="Exit the program", command = close_window)
 
@@ -171,12 +181,9 @@ def gui_start():
 	resetButton.place(relx=0.01,rely=0.9)
 	Exit.place(relx=0.5,rely=0.9)
 
-	tkinter.ttk.Separator(root, orient=VERTICAL).grid(column=1, row=0, rowspan=5, sticky='ns')
-
-	conTestLabel.grid(row=0,column=2,sticky=W+E)
-	conTestB.grid(row=1,column=2)
-
-
+	#tkinter.ttk.Separator(root, orient=VERTICAL).grid(column=1, row=0, rowspan=5, sticky='ns')
+	#conTestB.grid(row=1,column=2)
+	
 	# Run forever!
 	root.mainloop()
 
