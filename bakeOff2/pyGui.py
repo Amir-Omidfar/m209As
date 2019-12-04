@@ -1,3 +1,4 @@
+#Team:Amirali Omidfar, Hannaneh Hojaiji
 from sys import platform as sys_pf
 if sys_pf == 'darwin':
     import matplotlib
@@ -11,6 +12,9 @@ import server2
 #from server2 import connectionInit
 import socket
 
+
+#Voice commands
+import pyttsx3
 
 
 import time 
@@ -138,8 +142,12 @@ def gui_start():
 		xs.clear()
 		vx=0
 		vy=0
+		engine = pyttsx3.init()
+		engine.say(result)
+		engine.runAndWait()
 
 
+	
 	instLabel=tk.Label(root,text="Hit Record Data to begin. Then Follow the blinking LED to its permanent ON state and perform the gesture.")
 	resLabel=tk.Label(root,text="To see your result then press Show My Analysis")
 	conTestLabel=tk.Label(root,text="After you're done practicing the gesture. Click below for continious testing.")

@@ -1,3 +1,5 @@
+#Team:Amirali Omidfar, Hannaneh Hojaiji
+#Source for text to speech conversion https://pypi.org/project/pyttsx3/
 import csv
 import datetime as dt
 import numpy as np
