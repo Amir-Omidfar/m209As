@@ -11,9 +11,12 @@ ay= []
 az= []
 Vix = []
 Viy = []
+Viz = []
 xs = []
 vx = 0
 vy = 0
+vz = 0
+
 
 minAx=0
 minAy=0
@@ -54,9 +57,10 @@ def processMyData():
 	    lastRow=Rows[-1]
 
 	
-	global ax,ay,az,Vix,Viy,xs,vx,vy
+	global ax,ay,az,Vix,Viy,Viz,xs,vx,vy,vz
 	vx = 0
 	vy = 0
+	vz = 0
 	rawData=lastRow[42]
 	#result=feedback(str(rawData))
 	for j in range (14):
@@ -75,6 +79,9 @@ def processMyData():
 
 			Vix.append(ax[j]*(0.1) + vx)
 			vx = Vix[j]
+
+			Viz.append(az[j]*(0.1) + vz)
+			vz = Viz[j]
 			#timeStamp=dt.datetime.now().strftime('%-S.%f')
 			#timeStampRounded=timeStamp[:-3]
 			#xs.append(timeStamp)
@@ -107,6 +114,10 @@ def processMyData():
 	else:
 		result=random.choice(speedUp)
 
-	return result
+	if feedback(str(rawData))==0.0 :
+		ans="Classification Result: No Trigger detected\nFeedback: "
+	else:
+		ans="Classification Result: Trigger detected\nFeedback: "
+	return ans+result
 
 
