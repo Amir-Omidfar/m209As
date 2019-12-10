@@ -5,6 +5,6 @@
 
 #### This repository includes two projects under Bakeoff1 and Bakeoff2 that our group built over the 10 weeks period of the course. #####
 
-* Team members:* 
-** Haisong Lin,Hannaneh Hojaiji,Amirali Omidfar ** 
+Team members: 
+**Haisong Lin,Hannaneh Hojaiji,Amirali Omidfar** 
 
