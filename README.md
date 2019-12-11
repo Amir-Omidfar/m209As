@@ -11,5 +11,5 @@ Team members:
 
 ---
 
-* For each BakeOff, separate ReadMe files with detailed exaplanations are provided.
+**For each BakeOff, separate ReadMe files with detailed exaplanations are provided.**
 
