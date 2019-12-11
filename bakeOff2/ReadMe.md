@@ -26,7 +26,7 @@ The triggering mechanism was developed using Decision Tree classification, train
 
 ### Interacting with the Index Finger Improvement:
 For this step, the system uses Infrared LEDs to take two pictures with LEDs on and off. Based on the IR reflection from the surface of the finger and subtracting the two pictures it finds the location and direction of the finger which then helps with providing different commands such as : UP,DOWN,LEFT,RIGHT . Now as each user may wear the CamIoT differently and therefore pointing in different ways. Our GUI would help the user center their finger according to the camera lense and their way of pointing. Once the tip of the index finger is centered the system reaches better overall accuracy. We only tested this feature in dark places as our LEDs were not powerful enough to counteract ambient lighting. So numerical analysis is not yet provided for this part. The goal would be to provide something as below:
-![](server and Gui code/imageProcessing/resImg.png)
+![](serverGuicode/imageProcessing/resImg.png)
 
 ### What is your proposed approach? Describe the planned system architecture, algorithms etc. Take as much space as needed, and include figures if necessary.
 *** We are aiming to use to rule extraction in modeling the behavior of user performed triggering mechanism and give feedback in such way that user would improve his/her triggering action in later rounds.
