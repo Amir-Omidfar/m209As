@@ -1,4 +1,6 @@
 # Bake-Off 2
+** The goal of this Bake Off was to integrate Human-Artificial Intelligence interaction **
+
 ## Project Title:
 ### Explainable CamIoT
 ## Project Team : Amirali Omidfar, Hannaneh Hojaiji, Haisong Lin
