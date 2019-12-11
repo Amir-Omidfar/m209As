@@ -28,11 +28,18 @@ The triggering mechanism was developed using Decision Tree classification, train
 For this step, the system uses Infrared LEDs to take two pictures with LEDs on and off. Based on the IR reflection from the surface of the finger and subtracting the two pictures it finds the location and direction of the finger which then helps with providing different commands such as : UP,DOWN,LEFT,RIGHT . Now as each user may wear the CamIoT differently and therefore pointing in different ways. Our GUI would help the user center their finger according to the camera lense and their way of pointing. Once the tip of the index finger is centered the system reaches better overall accuracy. We only tested this feature in dark places as our LEDs were not powerful enough to counteract ambient lighting. So numerical analysis is not yet provided for this part. The goal would be to provide something as below:
 ![](serverGuiCode/imageProcessing/resImg.png)
 
-### What is your proposed approach? Describe the planned system architecture, algorithms etc. Take as much space as needed, and include figures if necessary.
-*** We are aiming to use to rule extraction in modeling the behavior of user performed triggering mechanism and give feedback in such way that user would improve his/her triggering action in later rounds.
+---
+
+### Repository explained:
+1. DataCollection and Training: This folder includes the scripts used for collecting and training the decision tree model used for detecting the triggering gesture. In case you'd like to train more data to evaluate the model, please keep in mind:
+    1. Data file format should be.csv
+    2. First row should be the titles, first row first column is "Class" and the remaining columns of the first row are xi,yi,zi i being from 1-14
+    3. The data collection for triggering considers 1.7 second window with step time of 0.1 second (which can be modified).
+2. raspberryPiCodes: These are the codes directly ran on CamIoT wearable, which used a [raspberry pi Z W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) as its MCU.
+3. poster : This folder contains our final poster and midterm presentation slides along with the shown graphs.
+4. serverGuiCode: Finally this folder explains the processing and analysis our system runs on the server side given the data received from raspberryPi. 
 
 
-For more information please refer to our mid-term presentation, which you may find here: [explainale CamIoT midter presentation](https://github.com/Amir-Omidfar/m209As/blob/master/bakeOff2/Bake%20off%202.pptx.pdf)
 
 
 #### Things to keep in mind while training the server:
