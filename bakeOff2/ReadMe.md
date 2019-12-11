@@ -1,8 +1,25 @@
 # Bake-Off 2
 **The goal of this Bake Off was to integrate Human-Artificial Intelligence interaction.**
-
+---
 ## Project Title: Explainable CamIoT
 **CamIoT (camera-based Internet of Things device ) is the name of a research project under Prof. Chen. The detailed code and documentation of camIoT is not discussed and shared here as the project is currently at journel submission pending status (Hopefully it will be uploaded soon).**
+---
+## More about CamIoT first:
+
+### Utilizing machine learning the wrist worn CamIoT lets users interact with home appliances by taking a picture of the appliance user's pointing at. 
+#### CamIoT includes three main sections:
+
+1. Triggering mechanism: The user would lift his arm from stationary state and point toward the object he likes to interact with. This gesture would tell CamIoT to start taking picture. 
+2. Object Classification: Using a pretrained VGG-19 and by only taking 3 pictures (and data augmentation)from each appliance we train CamIoT's classification model.
+3. Interact with appliances using the Index finger. 
+
+---
+## Now what is Explainale CamIoT:
+In Explainale CamIoT we focused on section 1 and 3 of CamIoT. Our goal was to improve camIoT behavior in triggering and interacting with the index finger.
+
+
+### Triggering Mechanism Improvement
+
 
 
 ###  What are you trying to do in your project? What kind of AI is involved? How is it interactive with users? What domain-specific problems does it solve?
