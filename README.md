@@ -1,6 +1,7 @@
 # UCLA Introduction to Human Computer Interaction #
 
-### Professor [Anthony Chen](https://www.ee.ucla.edu/xiang-anthony-chen/) - ### ##### Fall 2019 #####
+### Professor [Anthony Chen](https://www.ee.ucla.edu/xiang-anthony-chen/)  ### 
+##### Fall 2019 #####
 #### [Class Website](https://www.notion.so/2019-Fall-ECE-209AS-Human-Computer-Interaction-82df29ed1b1f49c4bcb245550133f3f8) ###
 ---
 
