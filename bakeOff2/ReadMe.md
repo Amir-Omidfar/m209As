@@ -18,15 +18,10 @@
 In Explainale CamIoT we focused on section 1 and 3 of CamIoT. Our goal was to improve camIoT behavior in triggering and interacting with the index finger.
 
 
-### Triggering Mechanism Improvement
+### Triggering Mechanism Improvement:
+The triggering mechanism was developed using Decision Tree classification, training only on a single person. So to enhance the triggering performance. We developed a GUI that trains the users how to perform the triggering mechanism correctly. We applied Rule Extraction to give feedback to users. For training the gesture, we used acceleration data in x,y,z axes (Ax,AY,Az) using [MPU-6050](https://www.sparkfun.com/products/11028) IMU sensor. Our study showed each triggering gesture includes a max followed by a min in Ax and Ay axes. Calculating the min and max ranges, changes in velocities and proportional time stamps of where such points happened in training data we analyzed our users' performance. Our GUI would then turned those analysis into simple implicit feedbacks such as : "Seems like you started early, go a bit slower next time... ".After user learns the triggering gesture, we run another test this time in continous domain, this time user would move around the testing room while randomly performing the gesture. This stage was mainly to improve on the rate of false of positive labels. In this round an on-board LED used to provide feedback to users. The users' data are saved and used later on to improve the model overall performance.      
 
 
-
-###  What are you trying to do in your project? What kind of AI is involved? How is it interactive with users? What domain-specific problems does it solve?
-*** Our goal is to improve camIoT behavior in three different phase :***
-1. Triggering mechanism
-2. Object deteciton 
-3. Finger control
 
 ### What is your proposed approach? Describe the planned system architecture, algorithms etc. Take as much space as needed, and include figures if necessary.
 *** We are aiming to use to rule extraction in modeling the behavior of user performed triggering mechanism and give feedback in such way that user would improve his/her triggering action in later rounds.
