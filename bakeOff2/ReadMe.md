@@ -42,6 +42,5 @@ For this step, the system uses Infrared LEDs to take two pictures with LEDs on a
 4. serverGuiCode: Finally this folder explains the processing and analysis our system runs on the server side given the data received from raspberryPi. 
 
 ---
-**You may find our final demo [here](https://www.youtube.com/watch?v=NoLr-y49aOo&feature=youtu.be) and our poster [here](https://github.com/Amir-Omidfar/m209As/blob/master/bakeOff2/poster/poster.pdf)
-![](poster/poster.pdf)**
+**You may find our final demo [here](https://www.youtube.com/watch?v=NoLr-y49aOo&feature=youtu.be) and our poster [here](https://github.com/Amir-Omidfar/m209As/blob/master/bakeOff2/poster/poster.pdf)**
 
