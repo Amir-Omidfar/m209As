@@ -1,4 +1,4 @@
-# Bake-Off 2
+# Bake-Off 2- Explainable CamIoT
 **The goal of this Bake Off was to integrate Human-Artificial Intelligence interaction.**
 ---
 ## Project Title: Explainable CamIoT
