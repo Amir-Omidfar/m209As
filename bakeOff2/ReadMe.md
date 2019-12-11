@@ -43,4 +43,15 @@ For this step, the system uses Infrared LEDs to take two pictures with LEDs on a
 
 ---
 **You may find our final demo [here](https://www.youtube.com/watch?v=NoLr-y49aOo&feature=youtu.be) and our poster [here](https://github.com/Amir-Omidfar/m209As/blob/master/bakeOff2/poster/poster.pdf)**
+---
+### References:
+1. [Decision Tree model](https://scikit-learn.org/stable/modules/tree.html)
+2. [Python Socket Library](https://docs.python.org/3.4/library/socketserver.html)
+3. [Python OpenCV Library](https://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html?highlight=subtract#cv2.subtract)
+
+### Related Readings:
+1. [Rule Extraction Algorithm for Deep Neural Networks: A Review](https://arxiv.org/abs/1610.05267)
+2. [Explainable AI for Trees: From Local Explanations to Global Understanding.](https://arxiv.org/pdf/1905.04610.pdf)
+3. [Activity Recognition from Accelerometer Data](http://new.aaai.org/Papers/IAAI/2005/IAAI05-013.pdf)
+
 
