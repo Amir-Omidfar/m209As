@@ -2,7 +2,7 @@
 **The goal of this Bake Off was to integrate Human-Artificial Intelligence interaction.**
 
 ## Project Title: Explainable CamIoT
-**CamIoT (camera-based Internet of Things device ) is the name of a research project under Prof. Chen. The detailed code and documentation of camIoT is not discussed and shared here as the project is currently at journel submission pending status (Hopefully it will be uploaded soon). **
+**CamIoT (camera-based Internet of Things device ) is the name of a research project under Prof. Chen. The detailed code and documentation of camIoT is not discussed and shared here as the project is currently at journel submission pending status (Hopefully it will be uploaded soon).**
 
 
 ###  What are you trying to do in your project? What kind of AI is involved? How is it interactive with users? What domain-specific problems does it solve?
