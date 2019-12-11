@@ -32,17 +32,15 @@ For this step, the system uses Infrared LEDs to take two pictures with LEDs on a
 
 ### Repository explained:
 1. DataCollection and Training: This folder includes the scripts used for collecting and training the decision tree model used for detecting the triggering gesture. In case you'd like to train more data to evaluate the model, please keep in mind:
+   ```
     1. Data file format should be.csv
     2. First row should be the titles, first row first column is "Class" and the remaining columns of the first row are xi,yi,zi i being from 1-14
     3. The data collection for triggering considers 1.7 second window with step time of 0.1 second (which can be modified).
+    ```
 2. raspberryPiCodes: These are the codes directly ran on CamIoT wearable, which used a [raspberry pi Z W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) as its MCU.
 3. poster : This folder contains our final poster and midterm presentation slides along with the shown graphs.
 4. serverGuiCode: Finally this folder explains the processing and analysis our system runs on the server side given the data received from raspberryPi. 
 
+---
+**You may find our final demo [here](https://www.youtube.com/watch?v=NoLr-y49aOo&feature=youtu.be) and our poster [here]()**
 
-
-
-#### Things to keep in mind while training the server:
-    1. Data file format should be.csv
-    2. First row should be the titles, first row first column is "Class" and the remaining columns of the first row are xi,yi,zi i being from 1-42
-    3. 
